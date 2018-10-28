@@ -1,3 +1,8 @@
+#additionally, don't commit notebooks, or text files.
+*.ipynb
+*.txt
+*.pkl
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
