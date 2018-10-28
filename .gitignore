@@ -1,6 +1,5 @@
-#additionally, don't commit notebooks, or text files.
+#additionally, don't commit notebooks or pickled files.
 *.ipynb
-*.txt
 *.pkl
 
 # Byte-compiled / optimized / DLL files
