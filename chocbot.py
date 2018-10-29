@@ -206,7 +206,7 @@ class Event:
             bot_named = self.bot.bot_id in event['text'] #is the bot referenced?
             channel = event['channel'] #what channel was this sent in?
 
-            split = event['text'].split()
+            split = event['text'].lower().split()
             
             #check if we are asking for the score
             score_commands = ['scoreboard', 'score', 'tally']
@@ -242,7 +242,7 @@ class Event:
             
             #check for awards...
             awards = [':kitkat:', ':chocolatebar:', ':chocolate:', ':taco:', 'taco', 'kitkat', 'chocolate']
-            award_commands = ['give', 'award', 'won', 'grant', 'hand', 'win', 'gift']
+            award_commands = ['give', 'award', 'won', 'grant', 'hand', 'win', 'gift', 'for']
             #does it contain reference to a user?
             if not set(awards).isdisjoint(split) and not set(award_commands).isdisjoint(split):
                 #has triggers for an award
